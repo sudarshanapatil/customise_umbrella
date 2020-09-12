@@ -55,7 +55,7 @@ function App() {
             <p>.png and .jpg file only. Max file size 5MB.</p>
           </div>
           <div>
-            <input className='upload-button' type="file" name="file" onChange={(e) => { imageUpload(e) }} />
+            {/* <input className='upload-button' type="file" name="file" onChange={(e) => { imageUpload(e) }} /> */}
             <Form>
               <Form.File className='myUpload'
                 id="custom-file"
