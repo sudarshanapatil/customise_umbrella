@@ -52,7 +52,7 @@ function App() {
           <div>
             <div style={{fontWeight:'bold'}}>Customize your umbrella</div>
             Upload logo for instant preview.
-            <p>.png and .jpg file only. Max file size 5MB</p>
+            <p>.png and .jpg file only. Max file size 5MB.</p>
           </div>
           <div>
             <input className='upload-button' type="file" name="file" onChange={(e) => { imageUpload(e) }} />
