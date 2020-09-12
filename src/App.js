@@ -30,6 +30,7 @@ function App() {
             width='400'
             height='400'
             alt='umbrella'
+            onLoad={() => { setLoader(false) }}
           >
           </img>
           {(file !== '') &&
@@ -42,15 +43,24 @@ function App() {
             Custom Umbrella
           </div>
           <div className='color-options'>
-            <div className='blue' onClick={() => { setColor({ imageColor: 'Blue', backgroundColor: 'lightblue' }) }}>
+            <div className='blue' onClick={() => {
+              setColor({ imageColor: 'Blue', backgroundColor: 'lightblue' });
+              setLoader(true)
+            }}>
             </div>
-            <div className='yellow' onClick={() => { setColor({ imageColor: 'Yellow', backgroundColor: 'lightyellow' }) }}>
+            <div className='yellow' onClick={() => {
+              setColor({ imageColor: 'Yellow', backgroundColor: 'lightyellow' });
+              setLoader(true);
+            }}>
             </div>
-            <div className='pink' onClick={() => { setColor({ imageColor: 'Pink', backgroundColor: 'pink' }) }}>
+            <div className='pink' onClick={() => {
+              setColor({ imageColor: 'Pink', backgroundColor: 'pink' });
+              setLoader(true);
+            }}>
             </div>
           </div>
           <div>
-            <div style={{fontWeight:'bold'}}>Customize your umbrella</div>
+            <div style={{ fontWeight: 'bold' }}>Customize your umbrella</div>
             Upload logo for instant preview.
             <p>.png and .jpg file only. Max file size 5MB.</p>
           </div>
