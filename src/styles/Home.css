@@ -8,7 +8,7 @@
 .image-options{
   padding-top:20%;
   padding-right: 10%;   
-   height:100%;
+  height:100%;
 }
 
 .wrapper-div{
@@ -16,44 +16,48 @@
 }
 
 .color-options{
-    display: flex;
-    padding-top: 5%;
-    padding-bottom: 5%;
+  display: flex;
+  padding-top: 5%;
+  padding-bottom: 5%;
 }
 
 .pink{
-    background-color:palevioletred;
-    width: 30px;
-    height: 30px;
-    border-radius:15px ;
-    margin:1%;
+  background-color:palevioletred;
+  width: 30px;
+  height: 30px;
+  border-radius:15px ;
+  margin:1%;
 }
 
 .blue{
-    background-color:blue;
-    width: 30px;
-    height: 30px;
-    border-radius:15px ;
-    margin:1%;
+  background-color:blue;
+  width: 30px;
+  height: 30px;
+  border-radius:15px ;
+  margin:1%;
 }
 .yellow{
-    background-color:yellow;
-    width: 30px;
-    height: 30px;
-    border-radius:15px ;
-    margin:1%;
+  background-color:yellow;
+  width: 30px;
+  height: 30px;
+  border-radius:15px ;
+  margin:1%;
 }
 
 .upload-button{
-    background-color:blue ;
-    color: white;
-    padding: 1%;
-    text-align: center;
-    /* opacity: 0; */
+  color: white;
+  padding-top: 2%;
+  text-align: center;
+  /* opacity: 0; */
+}
+
+.button-text{
+  color: white;
+  padding-left: 1%;
 }
 
 .myUpload{
-background-color: blueviolet;
+  background-color: blueviolet;
 }
 
 .title{
@@ -62,15 +66,20 @@ background-color: blueviolet;
 }
 
 .logo{
-    width: 100px;
-    height: 50px;
-    position: absolute;
-    top:70%;
-    left: 44%;
+  width: 100px;
+  height: 50px;
+  position: absolute;
+  top:68%;
+  left: 48%;
+}
+
+.umbrellaImage{
+  width:70%;
+  height:90%
 }
 
 .loader {
-  height: 40vmin;
+  height: 30vmin;
   pointer-events: none;
 }
 
