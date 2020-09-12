@@ -1,0 +1,90 @@
+.image-container{
+  padding-top: 20%;
+  padding-left: 15%;
+  position: relative;
+  padding-bottom: 11%;
+}
+
+.image-options{
+  padding-top:20%;
+  padding-right: 10%;   
+   height:100%;
+}
+
+.wrapper-div{
+    /* background-color: bisque; */
+}
+
+.color-options{
+    display: flex;
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.pink{
+    background-color:palevioletred;
+    width: 30px;
+    height: 30px;
+    border-radius:15px ;
+    margin:1%;
+}
+
+.blue{
+    background-color:blue;
+    width: 30px;
+    height: 30px;
+    border-radius:15px ;
+    margin:1%;
+}
+.yellow{
+    background-color:yellow;
+    width: 30px;
+    height: 30px;
+    border-radius:15px ;
+    margin:1%;
+}
+
+.upload-button{
+    background-color:blue ;
+    color: white;
+    padding: 1%;
+    text-align: center;
+    /* opacity: 0; */
+}
+
+.myUpload{
+background-color: blueviolet;
+}
+
+.title{
+  font-weight: bold;
+  font-size: 50px;
+}
+
+.logo{
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    top:70%;
+    left: 44%;
+}
+
+.loader {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .loader {
+    animation: loader-spin infinite 20s linear;
+  }
+}
+
+@keyframes loader-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
