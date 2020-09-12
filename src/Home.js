@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Image, Col } from 'react-bootstrap';
-
+// import { Form, Image, Col } from 'react-bootstrap';
 import './styles/Home.css';
 import loaderImg from './images/loader_icon.svg';
 
@@ -75,8 +74,8 @@ function App() {
           <div>
             <div className='upload-button' style={{ backgroundColor: imageColor }}>
               <input id="files" style={{ visibility: "hidden" }} type="file" onChange={(e) => { imageUpload(e) }} />
-              <img src={require('./images/upload_icon.svg')}></img>
-              <label for="files" className="button-text">{uploadBtnName}</label>
+              <img src={require('./images/upload_icon.svg')} alt='uploadIcon'></img>
+              <label htmlFor="files" className="button-text">{uploadBtnName}</label>
             </div>
           </div>
         </div>
