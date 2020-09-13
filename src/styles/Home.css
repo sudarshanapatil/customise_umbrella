@@ -75,12 +75,22 @@
 
 .umbrellaImage{
   width:70%;
-  height:90%
+  height:90%;
+  position: relative;
+  
+}
+
+.hide{
+  display: none;
 }
 
 .loader {
-  height: 30vmin;
+  height: 10vmin;
   pointer-events: none;
+  position: absolute;
+  top:65%;
+  left:50%;
+  /* z-index: -1; */
 }
 
 @media (prefers-reduced-motion: no-preference) {

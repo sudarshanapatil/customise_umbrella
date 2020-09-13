@@ -28,9 +28,11 @@ function App() {
       style={{ backgroundColor }}>
       <div className='row'>
         <div className='image-container col-xs-12 col-md-6'>
-          <img className='umbrellaImage' src={require(`./images/${imageColor}_umbrella.png`)}
+          <img className={`umbrellaImage ${showLoader ? 'hide' : ''}`}
+            src={require(`./images/${imageColor}_umbrella.png`)}
             alt='umbrella'
             onLoad={() => {
+              console.log("on load")
               setLoader(false);
             }}
           >
