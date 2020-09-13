@@ -1,13 +1,25 @@
 import React, { useState } from 'react';
-// import { Form, Image, Col } from 'react-bootstrap';
 import './styles/Home.css';
-import loaderImg from './images/loader_icon.svg';
+import Loader from './components/Loader';
 
 function App() {
+
+  const options = [
+    { imageColor: 'blue', backgroundColor: 'lightblue' },
+    { imageColor: 'yellow', backgroundColor: 'lightyellow' },
+    { imageColor: 'deepPink', backgroundColor: 'lightpink' }];
+
   const [color, setColor] = useState({
     backgroundColor: 'pink',
-    imageColor: 'DeepPink'
+    imageColor: 'deepPink'
   });
+
+  const [colorLoader, setColorLoader] = useState({
+    'deepPink': 0,
+    'blue': 0,
+    'yellow': 0
+  });
+
   const [fileObj, uploadeFile] = useState({
     file: '',
     uploadBtnName: 'UPLOAD LOGO'
@@ -16,11 +28,27 @@ function App() {
   const { file, uploadBtnName } = fileObj;
   const { imageColor, backgroundColor } = color;
 
+  function onClickColor(color) {
+    if (colorLoader[color.imageColor] === 0) {
+      setLoader(true);
+    }
+    setColor({ imageColor: color.imageColor, backgroundColor: color.backgroundColor });
+  }
+
   function imageUpload(e) {
     uploadeFile({
       file: URL.createObjectURL(e.target.files[0]),
       uploadBtnName: e.target.files[0].name
     });
+  }
+
+  function deleteLogo() {
+    uploadeFile({ file: '', uploadBtnName: 'UPLOAD LOGO' });
+  }
+
+  function callOnLoad(imageColor) {
+    setColorLoader({ ...colorLoader, [imageColor]: 1 });
+    setLoader(false);
   }
 
   return (
@@ -31,16 +59,12 @@ function App() {
           <img className={`umbrellaImage ${showLoader ? 'hide' : ''}`}
             src={require(`./images/${imageColor}_umbrella.png`)}
             alt='umbrella'
-            onLoad={() => {
-              console.log("on load")
-              setLoader(false);
-            }}
+            onLoad={() => { callOnLoad(imageColor) }}
           >
           </img>
           {
             showLoader &&
-            <img src={loaderImg} className='loader' alt='loader'>
-            </img>
+            <Loader color={imageColor} />
           }
           {
             (file !== '') &&
@@ -52,37 +76,36 @@ function App() {
             Custom Umbrella
           </div>
           <div className='color-options'>
-            <div className='blue' onClick={() => {
-              setLoader(true)
-              setColor({ imageColor: 'Blue', backgroundColor: 'lightblue' });
-            }}>
-            </div>
-            <div className='yellow' onClick={() => {
-              setLoader(true);
-              setColor({ imageColor: 'Yellow', backgroundColor: 'lightyellow' });
-            }}>
-            </div>
-            <div className='pink' onClick={() => {
-              setLoader(true);
-              setColor({ imageColor: 'DeepPink', backgroundColor: 'lightpink' });
-            }}>
-            </div>
+            {
+              options.map((color) => {
+                return (
+                  <div className={color.imageColor} key={color.imageColor}
+                    onClick={() => { onClickColor(color); }}>
+                  </div>)
+              })}
           </div>
           <div>
-            <div style={{ fontWeight: 'bold' }}>Customize your umbrella</div>
+            <div style={{ fontWeight: 'bold', fontSize: '26px' }}>Customize your umbrella</div>
             Upload logo for instant preview.
-            <p>.png and .jpg file only. Max file size 5MB.</p>
+            <p style={{ fontSize: 14 }}>.png and .jpg file only. Max file size 5MB.</p>
           </div>
           <div>
             <div className='upload-button' style={{ backgroundColor: imageColor }}>
               <input id="files" style={{ visibility: "hidden" }} type="file" onChange={(e) => { imageUpload(e) }} />
               <img src={require('./images/upload_icon.svg')} alt='uploadIcon'></img>
               <label htmlFor="files" className="button-text">{uploadBtnName}</label>
+              {(file !== '') &&
+                <img src={require('./images/delete.png')}
+                  width='20' height='20'
+                  onClick={() => { deleteLogo() }}
+                  alt='deleteIcon'>
+                </img>
+              }
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 

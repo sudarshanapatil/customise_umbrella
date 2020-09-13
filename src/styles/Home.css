@@ -21,7 +21,11 @@
   padding-bottom: 5%;
 }
 
-.pink{
+#files{
+  display: none;
+}
+
+.deepPink{
   background-color:palevioletred;
   width: 30px;
   height: 30px;
@@ -35,6 +39,8 @@
   height: 30px;
   border-radius:15px ;
   margin:1%;
+  border-color: tomato;
+  border-width: 2px;
 }
 .yellow{
   background-color:yellow;
@@ -47,13 +53,16 @@
 .upload-button{
   color: white;
   padding-top: 2%;
+  width:80%;
   text-align: center;
+  cursor: pointer;
   /* opacity: 0; */
 }
 
 .button-text{
   color: white;
-  padding-left: 1%;
+  padding-left: 30%;
+  padding-right:10%
 }
 
 .myUpload{
@@ -76,8 +85,7 @@
 .umbrellaImage{
   width:70%;
   height:90%;
-  position: relative;
-  
+  position: relative;  
 }
 
 .hide{
