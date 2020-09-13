@@ -7,19 +7,17 @@ function App() {
   const options = [
     { imageColor: 'blue', backgroundColor: 'lightblue' },
     { imageColor: 'yellow', backgroundColor: 'lightyellow' },
-    { imageColor: 'deepPink', backgroundColor: 'lightpink' }];
-
+    { imageColor: 'deepPink', backgroundColor: 'lightpink' }
+  ];
   const [color, setColor] = useState({
     backgroundColor: 'pink',
     imageColor: 'deepPink'
   });
-
   const [colorLoader, setColorLoader] = useState({
     'deepPink': 0,
     'blue': 0,
     'yellow': 0
   });
-
   const [fileObj, uploadeFile] = useState({
     file: '',
     uploadBtnName: 'UPLOAD LOGO'
