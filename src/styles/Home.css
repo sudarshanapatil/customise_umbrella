@@ -165,7 +165,7 @@
 }
 
 @media screen and (max-width: 600px) {
-  .umbrellaImage{
+  .umbrella-image{
     width: 200px;
   }
   .logo{
@@ -194,7 +194,7 @@
 }
 
 @media screen and (max-width: 992px) {
-  .umbrellaImage{
+  .umbrella-image{
     width: 300px;
   }
 
