@@ -64,7 +64,9 @@ function App() {
             <Loader color={imageColor} class='loader' />
           }
           {
-            (file !== '') && <img src={file} className='logo' alt='logo'></img>
+            (file !== '') &&
+            <img src={file} className='logo' alt='logo'>
+            </img>
           }
         </div>
         <div className='image-options col-xs-12 col-md-6'>
@@ -88,10 +90,13 @@ function App() {
             <p style={{ fontSize: 14 }}>.png and .jpg file only. Max file size 5MB.</p>
           </div>
           <div className='upload-button' style={{ backgroundColor: imageColor }}>
-            <input id="files" style={{ visibility: "hidden" }} type="file" onChange={(e) => { imageUpload(e) }} />
+            <input id="files"
+              style={{ visibility: "hidden" }}
+              type="file"
+              onChange={(e) => { imageUpload(e) }} />
             {
               showLoader &&
-               <Loader color='white' class='upload-button-loader'/>
+              <Loader color='white' class='upload-button-loader' />
             }
             {(showLoader === false) &&
               <img src={require('./images/upload_icon.svg')} alt='uploadIcon'>
