@@ -1,18 +1,45 @@
+.wrapper-div{
+  width: 100vw;
+  height: 100vh;
+    /* background-color: bisque; */
+}
+
 .image-container{
-  padding-top: 20%;
-  padding-left: 15%;
+  margin-top: 15%;
   position: relative;
-  padding-bottom: 11%;
+  text-align: center;  
 }
 
 .image-options{
-  padding-top:20%;
-  padding-right: 10%;   
+  margin-top:15%;
+  margin-bottom: 8%; 
   height:100%;
 }
 
-.wrapper-div{
-    /* background-color: bisque; */
+.logo{
+  width: 10%;
+  height:5%;
+  position: absolute;
+  top:300px;
+  left: 50%;
+  margin-left: -5%;
+}
+
+.loader {
+  width: 40%;
+  height: 20%;
+  pointer-events: none;
+  top: 120px;
+  position: absolute;
+  left: 50%;
+  margin-left: -20%;
+
+}
+
+.umbrellaImage{
+  width:400px;
+  position: relative;  
+  margin:20px,auto;
 }
 
 .color-options{
@@ -38,10 +65,27 @@
   width: 30px;
   height: 30px;
   border-radius:15px ;
-  margin:1%;
-  border-color: tomato;
-  border-width: 2px;
+  margin:1%; 
 }
+
+.click-blue{
+  border-color: rgb(84, 146, 204);
+  border-width: 4px;
+  border-style: solid;
+}
+
+.click-deepPink{
+  border-color: rgb(216, 145, 192);
+  border-width: 4px;
+  border-style: solid;
+}
+
+.click-yellow{
+  border-color: rgb(212, 228, 121);
+  border-width: 4px;
+  border-style: solid;
+}
+
 .yellow{
   background-color:yellow;
   width: 30px;
@@ -53,7 +97,7 @@
 .upload-button{
   color: white;
   padding-top: 2%;
-  width:80%;
+  width:60%;
   text-align: center;
   cursor: pointer;
   /* opacity: 0; */
@@ -61,7 +105,7 @@
 
 .button-text{
   color: white;
-  padding-left: 30%;
+  padding-left: 10%;
   padding-right:10%
 }
 
@@ -74,31 +118,8 @@
   font-size: 50px;
 }
 
-.logo{
-  width: 100px;
-  height: 50px;
-  position: absolute;
-  top:68%;
-  left: 48%;
-}
-
-.umbrellaImage{
-  width:70%;
-  height:90%;
-  position: relative;  
-}
-
 .hide{
   display: none;
-}
-
-.loader {
-  height: 10vmin;
-  pointer-events: none;
-  position: absolute;
-  top:65%;
-  left:50%;
-  /* z-index: -1; */
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -113,5 +134,30 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .umbrellaImage{
+    width: 200px;
+  }
+  .logo{
+    top:150px
+  }
+  .loader{
+    top:85px
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .umbrellaImage{
+    width: 300px;
+  }
+
+  .loader{
+    top:100px
+  }
+  .logo{
+    top:220px
   }
 }

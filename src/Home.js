@@ -3,7 +3,6 @@ import './styles/Home.css';
 import Loader from './components/Loader';
 
 function App() {
-
   const options = [
     { imageColor: 'blue', backgroundColor: 'lightblue' },
     { imageColor: 'yellow', backgroundColor: 'lightyellow' },
@@ -65,20 +64,21 @@ function App() {
             <Loader color={imageColor} />
           }
           {
-            (file !== '') &&
-            <img src={file} className='logo' alt='logo'></img>
+            (file !== '') && <img src={file} className='logo' alt='logo'></img>
           }
         </div>
         <div className='image-options col-xs-12 col-md-6'>
-          <div className='title'>
+          <div className='title row'>
             Custom Umbrella
           </div>
-          <div className='color-options'>
+          <div className='color-options row'>
             {
-              options.map((color) => {
+              options.map((option) => {
+                let clickedColor = `click-${color.imageColor}`;
                 return (
-                  <div className={color.imageColor} key={color.imageColor}
-                    onClick={() => { onClickColor(color); }}>
+                  <div className={`${option.imageColor} ${option.imageColor === color.imageColor ? clickedColor : ''}  `}
+                    key={option.imageColor}
+                    onClick={() => { onClickColor(option); }}>
                   </div>)
               })}
           </div>
@@ -87,19 +87,15 @@ function App() {
             Upload logo for instant preview.
             <p style={{ fontSize: 14 }}>.png and .jpg file only. Max file size 5MB.</p>
           </div>
-          <div>
-            <div className='upload-button' style={{ backgroundColor: imageColor }}>
-              <input id="files" style={{ visibility: "hidden" }} type="file" onChange={(e) => { imageUpload(e) }} />
-              <img src={require('./images/upload_icon.svg')} alt='uploadIcon'></img>
-              <label htmlFor="files" className="button-text">{uploadBtnName}</label>
-              {(file !== '') &&
-                <img src={require('./images/delete.png')}
-                  width='20' height='20'
-                  onClick={() => { deleteLogo() }}
-                  alt='deleteIcon'>
-                </img>
-              }
-            </div>
+          <div className='upload-button' style={{ backgroundColor: imageColor }}>
+            <input id="files" style={{ visibility: "hidden" }} type="file" onChange={(e) => { imageUpload(e) }} />
+            <img src={require('./images/upload_icon.svg')} alt='uploadIcon'></img>
+            <label htmlFor="files" className="button-text">{uploadBtnName}</label>
+            {(file !== '') &&
+              <svg width="28.3" height="31.2" viewBox="0 0 20 20" onClick={() => { deleteLogo() }}>
+                <path fill="white" d="M15.898,4.045c-0.271-0.272-0.713-0.272-0.986,0l-4.71,4.711L5.493,4.045c-0.272-0.272-0.714-0.272-0.986,0s-0.272,0.714,0,0.986l4.709,4.711l-4.71,4.711c-0.272,0.271-0.272,0.713,0,0.986c0.136,0.136,0.314,0.203,0.492,0.203c0.179,0,0.357-0.067,0.493-0.203l4.711-4.711l4.71,4.711c0.137,0.136,0.314,0.203,0.494,0.203c0.178,0,0.355-0.067,0.492-0.203c0.273-0.273,0.273-0.715,0-0.986l-4.711-4.711l4.711-4.711C16.172,4.759,16.172,4.317,15.898,4.045z"></path>
+              </svg>
+            }
           </div>
         </div>
       </div>
