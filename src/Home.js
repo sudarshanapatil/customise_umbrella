@@ -51,7 +51,7 @@ function App() {
   return (
     <div className='wrapper-div container-fluid'
       style={{ backgroundColor }}>
-      <div className='row'>
+      <div className='row' id='main-row'>
         <div className='image-container col-xs-12 col-md-6'>
           <img className={`umbrella-image ${showLoader ? 'hide' : ''}`}
             src={require(`./images/${imageColor}_umbrella.png`)}

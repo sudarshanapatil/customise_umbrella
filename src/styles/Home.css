@@ -4,14 +4,12 @@
 }
 
 .image-container{
-  margin-top: 15%;
+  height: 300px;
   position: relative;
   text-align: center;  
 }
 
 .image-options{
-  margin-top:15%;
-  margin-bottom: 8%; 
   height:100%;
 }
 
@@ -42,8 +40,7 @@
 
 .umbrella-image{
   width:400px;
-  position: relative;  
-  margin:20px,auto;
+  position: relative;
 }
 
 .color-options{
@@ -164,15 +161,56 @@
   }
 }
 
+#main-row {
+  padding: 200px 0;
+}
+
+@media screen and (max-width: 992px) {
+  .umbrella-image{
+    width: 300px;
+  }
+
+  .loader{
+    top: 80px;
+  }
+
+  .logo{
+    top: 220px;
+  }
+
+  .upload-button{
+    width: 100%;
+  }
+  .image-options{
+    text-align: center;
+  }
+  .title{
+    justify-content: center;
+    font-size: 40px;
+  }
+  .color-options{
+    justify-content: center;
+  }
+  .custom-title{
+    font-size: 20px;
+  }
+
+  #main-row {
+    padding: 150px 0;
+  }
+}
+
 @media screen and (max-width: 600px) {
   .umbrella-image{
     width: 200px;
   }
   .logo{
-    top:250px
+    top: 135px;
+    width: 40px;
+    height: 20px;
   }
   .loader{
-    top:85px
+    top: 40px;
   }
   .upload-button{
     width: 100%;    
@@ -189,36 +227,11 @@
   }
   .image-options{
     text-align: center;
-    margin-top: 20%;
   }
-}
-
-@media screen and (max-width: 992px) {
-  .umbrella-image{
-    width: 300px;
+  #main-row {
+    padding: 100px 0;
   }
-
-  .loader{
-    top:80px
-  }
-  .logo{
-    top:300px
-  }
-  .upload-button{
-    width: 100%;
-  }
-  .image-options{
-    text-align: center;
-    margin-top: 20%;
-  }
-  .title{
-    justify-content: center;
-    font-size: 40px;
-  }
-  .color-options{
-    justify-content: center;
-  }
-  .custom-title{
-    font-size: 20px;
+  .image-container {
+    height: 250px;
   }
 }
