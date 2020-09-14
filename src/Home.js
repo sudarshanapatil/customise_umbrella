@@ -53,7 +53,7 @@ function App() {
       style={{ backgroundColor }}>
       <div className='row'>
         <div className='image-container col-xs-12 col-md-6'>
-          <img className={`umbrellaImage ${showLoader ? 'hide' : ''}`}
+          <img className={`umbrella-image ${showLoader ? 'hide' : ''}`}
             src={require(`./images/${imageColor}_umbrella.png`)}
             alt='umbrella'
             onLoad={() => { callOnLoad(imageColor) }}
@@ -85,7 +85,7 @@ function App() {
               })}
           </div>
           <div>
-            <div className='customizeTitle'>Customize your umbrella</div>
+            <div className='custom-title'>Customize your umbrella</div>
             Upload logo for instant preview.
             <p style={{ fontSize: 14 }}>.png and .jpg file only. Max file size 5MB.</p>
           </div>
