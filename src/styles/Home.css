@@ -1,7 +1,6 @@
 .wrapper-div{
   width: 100vw;
   height: 100vh;
-    /* background-color: bisque; */
 }
 
 .image-container{
@@ -25,6 +24,12 @@
   margin-left: -5%;
 }
 
+.upload-button-loader{
+  width: 7%;
+  height: 7%;
+  pointer-events: none; 
+}
+
 .loader {
   width: 40%;
   height: 20%;
@@ -33,7 +38,6 @@
   position: absolute;
   left: 50%;
   margin-left: -20%;
-
 }
 
 .umbrellaImage{
@@ -95,18 +99,29 @@
 }
 
 .upload-button{
+  display: flex;
   color: white;
-  padding-top: 2%;
+  padding: 1%;
   width:60%;
   text-align: center;
   cursor: pointer;
-  /* opacity: 0; */
+  align-items: center;
+  justify-content: center;
+}
+
+.customizeTitle{ 
+  font-weight: 'bold';
+  font-size: '26px';
 }
 
 .button-text{
   color: white;
   padding-left: 10%;
-  padding-right:10%
+  padding-right:10%;
+  overflow: hidden;
+  white-space: nowrap; 
+  width: 80%;
+  text-overflow: ellipsis; 
 }
 
 .myUpload{
@@ -153,9 +168,10 @@
   .color-options{
     justify-content: center;
   }
-
+  .customizeTitle{
+    font-size: 18px;
+  }
 }
-
 
 @media screen and (max-width: 992px) {
   .umbrellaImage{
@@ -179,5 +195,8 @@
   }
   .color-options{
     justify-content: center;
+  }
+  .customizeTitle{
+    font-size: 20px;
   }
 }
