@@ -64,7 +64,7 @@ function App() {
             <Loader color={imageColor} class='loader' />
           }
           {
-            (file !== '') &&
+            (file !== '' && showLoader === false) &&
             <img src={file} className='logo' alt='logo'>
             </img>
           }
