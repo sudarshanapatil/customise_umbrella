@@ -147,7 +147,15 @@
   .loader{
     top:85px
   }
+  .upload-button{
+    width: 100%;    
+  }
+  .color-options{
+    justify-content: center;
+  }
+
 }
+
 
 @media screen and (max-width: 992px) {
   .umbrellaImage{
@@ -159,5 +167,17 @@
   }
   .logo{
     top:220px
+  }
+  .upload-button{
+    width: 100%;
+  }
+  .image-options{
+    text-align: center;
+  }
+  .title{
+    justify-content: center;
+  }
+  .color-options{
+    justify-content: center;
   }
 }
