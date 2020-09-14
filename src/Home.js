@@ -61,7 +61,7 @@ function App() {
           </img>
           {
             showLoader &&
-            <Loader color={imageColor} />
+            <Loader color={imageColor} class='loader' />
           }
           {
             (file !== '') && <img src={file} className='logo' alt='logo'></img>
@@ -91,7 +91,7 @@ function App() {
             <input id="files" style={{ visibility: "hidden" }} type="file" onChange={(e) => { imageUpload(e) }} />
             {
               showLoader &&
-               <Loader />
+               <Loader color='white' class='upload-button-loader'/>
             }
             {(showLoader === false) &&
               <img src={require('./images/upload_icon.svg')} alt='uploadIcon'>
